@@ -1,0 +1,14 @@
+
+./gradlew clean build
+
+docker build . -t deneme:v1
+sonra gedirik compose up-da  myapp:
+                                image: deneme:v1 yaziriq
+
+sonra docker-compose up  yaziriq terminalda
+daha sonra http://localhost:8082/hello giririk qabagimiza hello world cixir
+niye 8082??? cunki biz compose-de myapp-a ports:- 8082:8080   yazmisiq
+
+
+
+./gradlew clean build -inde islemesi ucun eyni zamanda 3306 portu sql ucun aktiv olmalidir

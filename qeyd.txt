@@ -1,0 +1,1 @@
+ders6 appin imagesini yarat ve docker-compose ile up elemek esl proyekt ozude.izah ile

@@ -1,0 +1,25 @@
+version: '3.1'
+services:
+  mysql:
+    hostname: mysql-hostname
+    image: mysql
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
+  adminer:
+    hostname: mysql-adminer
+    image: adminer
+    ports:
+      - 8580:8080
+volumes:
+  db_data:
+
+
+
+//ilk defe  ./gradlew clean build   -nin build olmasi ucun birinci bunun icindeki
+docker compose up olmalidir.bundan sonra docker buil sonra ise
+ sonra programin umumi imagesi ucun docker-compose up edilir.ve linke gedirik goruruk
+ ki programisleyir

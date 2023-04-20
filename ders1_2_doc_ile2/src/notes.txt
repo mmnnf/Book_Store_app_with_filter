@@ -1,0 +1,6 @@
+getpublisher islemir publishercontrollerde
+
+
+
+pagination ucun ornek link :
+http://localhost:8080/publisher/paging?size=3&page=0

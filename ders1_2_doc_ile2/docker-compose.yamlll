@@ -1,0 +1,33 @@
+version: '3.1'
+services:
+  mysql:
+    hostname: mysql-hostname
+    image: mysql
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
+    networks:
+      - myntw
+  adminer:
+    hostname: mysql-adminer
+    image: adminer
+    ports:
+      - 8580:8080
+  myapp:
+    image: deneme:v1
+#    restart: always
+    ports:
+      - 8082:8080
+    environment:
+      DB_CONNECTION_IP: "mysql-hostname"
+    networks:
+      - myntw
+    depends_on:
+      - mysql
+networks:
+  myntw:
+volumes:
+  db_data:
